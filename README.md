@@ -1,3 +1,30 @@
+# run guide
+
+## prepare
+In `root` dir
+```
+scons build/ALL/gem5.opt -j <NUMBER OF CPUs ON YOUR PLATFORM>
+```
+
+In `util/m5` dir
+```
+scons build/x86/out/m5
+```
+
+## compile test
+
+In `tests` dir
+```
+gcc -O0 -pthread -static multicore.c ../util/m5/build/x86/out/libm5.a -o multi_threaded_binary -I ../include/
+```
+
+## run test
+
+In `root` dir
+```
+build/ALL/gem5.opt configs/test.py
+```
+
 # The gem5 Simulator
 
 This is the repository for the gem5 simulator. It contains the full source code
