@@ -16,6 +16,7 @@ scons build/x86/out/m5
 In `tests` dir
 ```
 gcc -O0 -pthread -static multicore.c ../util/m5/build/x86/out/libm5.a -o multi_threaded_binary -I ../include/
+gcc -O0 -pthread -static multicore_sha256.c ../util/m5/build/x86/out/libm5.a -o sha256 -I ../include/
 ```
 
 ## run test

@@ -24,7 +24,8 @@ board = SimpleBoard(
     cache_hierarchy=cache_hierarchy,
 )
 
-binary_path = "tests/multi_threaded_binary"
+binary_path = "tests/sha256"
+#binary_path = "tests/multi_threaded_binary"
 board.set_se_binary_workload(BinaryResource(local_path=binary_path))
 
 simulator = Simulator(board=board)
